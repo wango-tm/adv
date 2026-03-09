@@ -5,7 +5,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/adv/', // Necesario para GitHub Pages (subcarpeta del dominio)
+  base: '/', // Necesario para GitHub Pages (subcarpeta del dominio)
   build: {
     outDir: 'docs', // GitHub Pages permite desplegar desde /docs
   },
