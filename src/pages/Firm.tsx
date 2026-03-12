@@ -119,7 +119,7 @@ export default function Firm() {
               style={{ marginLeft: 40 }}
               className="max-w-[700px] py-10 px-6 sm:py-10 sm:px-12 lg:py-10 lg:px-[111px]"
             >
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-6">
+              <span className="inline-block text-sm sm:text-[15px] font-semibold uppercase tracking-[0.2em] text-gold mb-6">
                 La Firma
               </span>
               <h2 className="font-heading text-4xl sm:text-5xl lg:text-[3rem] font-bold tracking-tight leading-[1.12] text-navy">
@@ -162,6 +162,7 @@ export default function Firm() {
             title="Principios"
             description="Advin Capital se guía por un conjunto de principios que definen su forma de trabajar en cada operación."
             align="center"
+            emphasizeLabel
           />
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -195,6 +196,7 @@ export default function Firm() {
             title="Josu Jiménez"
             description="Founder & Investment Advisor"
             align="left"
+            emphasizeLabel
           />
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -266,6 +268,7 @@ export default function Firm() {
             description="Cada operación se aborda mediante una estrategia definida, documentación rigurosa y un proceso de mercado cuidadosamente gestionado. Advin Capital se centra en operaciones selectivas donde la estructuración estratégica y una ejecución disciplinada son determinantes para alcanzar resultados óptimos."
             align="center"
             light
+            emphasizeLabel
           />
         </div>
       </section>

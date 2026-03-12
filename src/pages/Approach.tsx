@@ -94,22 +94,6 @@ export default function Approach() {
             Cada operación se desarrolla mediante una metodología estructurada que permite una ejecución disciplinada y un proceso de inversión cuidadosamente gestionado.
           </motion.p>
 
-          <motion.div
-            custom={3}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            style={{ marginTop: '30px' }}
-          >
-            <Link
-              to="/contact"
-              style={{ padding: '16px 44px', fontSize: '16px' }}
-              className="inline-flex items-center justify-center gap-3 bg-white text-navy font-semibold rounded-2xl hover:bg-cream active:scale-[0.97] transition-all duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.15)] group"
-            >
-              Contactar con la firma
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
         </div>
       </section>
 
@@ -127,7 +111,7 @@ export default function Approach() {
                 variants={fadeUp}
                 className="flex flex-col"
               >
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-4">
+                <span className="inline-block text-sm sm:text-[15px] font-semibold uppercase tracking-[0.2em] text-gold mb-4">
                   {String(item.step).padStart(2, '0')}
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight leading-[1.2] text-navy">
@@ -161,10 +145,10 @@ export default function Approach() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 text-center flex flex-col items-center">
           <SectionHeading
-            title="Para consultas confidenciales"
-            description="Por favor, contacte con la firma."
+            title="Contactar con Advin Capital."
             align="center"
             light
+            emphasizeLabel
           />
           <Link
             to="/contact"

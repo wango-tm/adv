@@ -112,22 +112,6 @@ export default function Advisory() {
             nuestros clientes en todas las fases del ciclo de inversión.
           </motion.p>
 
-          <motion.div
-            custom={3}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            style={{ marginTop: '30px' }}
-          >
-            <Link
-              to="/contact"
-              style={{ padding: '16px 44px', fontSize: '16px' }}
-              className="inline-flex items-center justify-center gap-3 bg-white text-navy font-semibold rounded-2xl hover:bg-cream active:scale-[0.97] transition-all duration-200 shadow-[0_4px_24px_rgba(0,0,0,0.15)] group"
-            >
-              Contact the Firm
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
         </div>
       </section>
 
@@ -142,6 +126,7 @@ export default function Advisory() {
             title="Asesoramiento estratégico"
             description="Asesoramiento estratégico en la estructuración y ejecución de operaciones de inversión."
             align="center"
+            emphasizeLabel
           />
         </div>
       </section>
@@ -174,7 +159,7 @@ export default function Advisory() {
                     ...(service.label === 'Strategic' ? { marginLeft: 70 } : {}),
                   }}
                 >
-                  <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-6">
+                  <span className="inline-block text-sm sm:text-[15px] font-semibold uppercase tracking-[0.2em] text-gold mb-6">
                     {service.label}
                   </span>
                   <h2 className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.12] text-navy">
@@ -238,9 +223,9 @@ export default function Advisory() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 text-center flex flex-col items-center">
           <SectionHeading
             title="Contactar con Advin Capital."
-            description="Para consultas confidenciales, contacte con Advin Capital."
             align="center"
             light
+            emphasizeLabel
           />
           <Link
             to="/contact"

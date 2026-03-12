@@ -6,9 +6,17 @@ interface SectionHeadingProps {
   description?: string
   align?: 'left' | 'center'
   light?: boolean
+  emphasizeLabel?: boolean
 }
 
-export default function SectionHeading({ label, title, description, align = 'center', light = false }: SectionHeadingProps) {
+export default function SectionHeading({
+  label,
+  title,
+  description,
+  align = 'center',
+  light = false,
+  emphasizeLabel = false,
+}: SectionHeadingProps) {
   const alignment = align === 'center' ? 'text-center items-center' : 'text-left items-start'
 
   const maxWidth = align === 'left' ? 'max-w-2xl' : 'max-w-[900px]'
@@ -23,7 +31,11 @@ export default function SectionHeading({ label, title, description, align = 'cen
       className={`flex flex-col ${alignment} ${maxWidth} ${align === 'center' ? 'mx-auto' : ''} ${marginBottom}`}
     >
       {label && (
-        <span className={`inline-block text-[11px] font-semibold uppercase tracking-[0.2em] mb-4 ${light ? 'text-gold-light' : 'text-gold'}`}>
+        <span
+          className={`inline-block uppercase tracking-[0.24em] mb-4 ${
+            emphasizeLabel ? 'text-[13px] sm:text-[14px] font-bold' : 'text-[11px] font-semibold'
+          } ${light ? 'text-gold-light' : 'text-gold'}`}
+        >
           {label}
         </span>
       )}

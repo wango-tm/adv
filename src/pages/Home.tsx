@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import PageTransition from '../components/PageTransition'
 import SectionHeading from '../components/SectionHeading'
 import CapabilityCard from '../components/CapabilityCard'
-import LogoText from '../../logo/LOGOADVIN.svg'
+import FullLogo from '../../logo/full.svg'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -56,28 +56,28 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 w-full mx-auto px-8 sm:px-14 lg:px-20 flex flex-col items-center text-center">
-          <motion.div
-            custom={0}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            style={{ padding: '6px 24px' }}
-            className="inline-flex items-center rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.12] mb-10"
-          >
-            <span className="text-[12px] font-medium text-white/70 tracking-widest uppercase">
-              Asesoramiento estratégico y estructuración de capital
-            </span>
-          </motion.div>
-
           <motion.img
             custom={1}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            src={LogoText}
+            src={FullLogo}
             alt="Advin Capital"
             className="w-[280px] sm:w-[380px] lg:w-[520px] xl:w-[580px] h-auto mx-auto drop-shadow-[0_18px_45px_rgba(0,0,0,0.55)]"
           />
+
+          <motion.div
+            custom={0}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            style={{ padding: '6px 24px', marginTop: '20px', marginBottom: '5px' }}
+            className="inline-flex items-center rounded-full bg-white/[0.08] backdrop-blur-md border border-white/[0.12] mt-6 sm:mt-8"
+          >
+            <span className="text-[12px] font-medium text-white/70 tracking-widest uppercase">
+              Asesoramiento estratégico y estructuración de capital
+            </span>
+          </motion.div>
 
           <motion.p
             custom={2}
@@ -111,13 +111,6 @@ export default function Home() {
               Por qué Advin
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <Link
-              to="/advisory"
-              style={{ padding: '16px 44px', fontSize: '16px' }}
-              className="inline-flex items-center justify-center gap-3 bg-white/[0.08] backdrop-blur-md border border-white/[0.15] text-white font-semibold rounded-2xl hover:bg-white/[0.14] active:scale-[0.97] transition-all duration-200"
-            >
-              Asesoramiento
-            </Link>
           </motion.div>
         </div>
 
@@ -144,6 +137,7 @@ export default function Home() {
             title="Independencia. Criterio. Ejecución."
             description="Asesoramos a propietarios e inversores en la estructuración y ejecución de operaciones de inversión en mercados nacionales e internacionales, con total independencia y alineación de intereses."
             align="center"
+            emphasizeLabel
           />
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -153,16 +147,16 @@ export default function Home() {
             className="mt-10 flex flex-wrap justify-center gap-x-12 gap-y-8 sm:gap-16 md:gap-24"
           >
             <div className="text-center">
-              <p className="text-xs sm:text-sm font-medium text-slate-mid uppercase tracking-[0.2em] mb-2">
+              <p className="text-xs sm:text-sm font-semibold text-navy uppercase tracking-[0.2em] mb-2">
                 Especialización
               </p>
-              <p className="text-sm sm:text-base font-semibold text-navy">
+              <p className="text-xs sm:text-sm text-slate-mid uppercase tracking-[0.2em]">
                 Hoteles y activos
               </p>
-              <p className="text-sm sm:text-base font-semibold text-navy">inmobiliarios</p>
+              <p className="text-xs sm:text-sm text-slate-mid uppercase tracking-[0.2em]">inmobiliarios</p>
             </div>
             <div className="text-center">
-              <p className="text-xs sm:text-sm font-medium text-slate-mid uppercase tracking-[0.2em] mb-2">
+              <p className="text-xs sm:text-sm font-semibold text-navy uppercase tracking-[0.2em] mb-2">
                 Años de experiencia
               </p>
               <span className="font-heading text-4xl sm:text-5xl font-bold text-gold tabular-nums block">
@@ -170,11 +164,11 @@ export default function Home() {
               </span>
             </div>
             <div className="text-center">
-              <p className="text-xs sm:text-sm font-medium text-slate-mid uppercase tracking-[0.2em] mb-2">
+              <p className="text-xs sm:text-sm font-semibold text-navy uppercase tracking-[0.2em] mb-2">
                 Mercados
               </p>
-              <p className="text-sm sm:text-base font-semibold text-navy">Europa y</p>
-              <p className="text-sm sm:text-base font-semibold text-navy">mercados internacionales</p>
+              <p className="text-xs sm:text-sm text-slate-mid uppercase tracking-[0.2em]">Europa y mercados</p>
+              <p className="text-xs sm:text-sm text-slate-mid uppercase tracking-[0.2em]">internacionales</p>
             </div>
           </motion.div>
         </div>
@@ -188,6 +182,7 @@ export default function Home() {
             title="Asesoramiento estratégico y estructuración de capital"
             description="Especializados en el sector hospitality, asesoramos en la estructuración y ejecución de operaciones de inversión con un único equipo y bajo un mismo estándar de trabajo."
             align="center"
+            emphasizeLabel
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full" style={{ marginBottom: 40 }}>
             {CAPABILITIES.map((item, i) => (
@@ -215,7 +210,7 @@ export default function Home() {
               transition={{ duration: 0.7, ease }}
               className="max-w-3xl px-6 py-10 md:px-[111px] md:py-[40px]"
             >
-              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-6">
+              <span className="inline-block text-sm sm:text-[15px] font-semibold uppercase tracking-[0.2em] text-gold mb-6">
                 Advin Capital
               </span>
               <h2 className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.12] text-navy">
@@ -272,6 +267,7 @@ export default function Home() {
             description="Asesoramos en operaciones en distintos mercados europeos y en jurisdicciones internacionales seleccionadas, combinando experiencia local con un enfoque riguroso y consistente."
             align="center"
             light
+            emphasizeLabel
           />
         </div>
       </section>

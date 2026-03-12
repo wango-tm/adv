@@ -9,7 +9,7 @@ const navLinks = [
   { to: '/firm', label: 'Firm' },
   { to: '/advisory', label: 'Advisory' },
   { to: '/approach', label: 'Approach' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact', label: 'Contacto' },
 ]
 
 export default function Navbar() {
