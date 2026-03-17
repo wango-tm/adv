@@ -53,13 +53,13 @@ export default function Contact() {
               <div className="px-1 sm:px-2">
                 <p
                   className="text-lg sm:text-xl font-bold text-white"
-                  style={{ marginLeft: 26 }}
+                  style={{ marginLeft: 10 }}
                 >
                   Encuéntranos aquí
                 </p>
                 <p
                   className="mt-1 text-xs sm:text-sm text-white/70"
-                  style={{ marginLeft: 26 }}
+                  style={{ marginLeft: 10 }}
                 >
                   Calle Antonio Machado 8 - Albacete (Spain)
                 </p>
@@ -70,8 +70,8 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.7, ease, delay: 0 }}
-                className="md:hidden w-full max-w-[380px] mx-auto rounded-2xl bg-white/[0.08] border border-white/[0.14] backdrop-blur-2xl overflow-hidden min-h-[320px]"
-                style={{ marginLeft: 26 }}
+                className="md:hidden w-full max-w-[372px] mx-auto rounded-2xl bg-white/[0.08] border border-white/[0.14] backdrop-blur-2xl overflow-hidden min-h-[320px]"
+                style={{ marginLeft: 10 }}
               >
                 <GoogleMap lat={38.98896} lng={-1.85915} zoom={16} />
               </motion.div>
@@ -92,13 +92,13 @@ export default function Contact() {
               <div className="px-1 sm:px-2 text-left md:text-right">
                 <p
                   className="text-lg sm:text-xl font-bold text-white"
-                  style={{ marginLeft: 26 }}
+                  style={{ marginLeft: 10 }}
                 >
                   Escríbenos aquí
                 </p>
                 <p
                   className="mt-1 text-xs sm:text-sm text-white/70"
-                  style={{ marginLeft: 26 }}
+                  style={{ marginLeft: 10 }}
                 >
                   hello@advincapital.com
                 </p>
@@ -110,8 +110,8 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.7, ease, delay: 0.12 }}
-                className="md:hidden mt-20 w-full max-w-[380px] mx-auto rounded-2xl bg-white/[0.08] border border-white/[0.14] backdrop-blur-2xl p-4 sm:p-6"
-                style={{ marginLeft: 26 }}
+                className="md:hidden mt-20 w-full max-w-[372px] mx-auto rounded-2xl bg-white/[0.08] border border-white/[0.14] backdrop-blur-2xl p-4 sm:p-6"
+                style={{ marginLeft: 10 }}
               >
                 <div className="flex h-full flex-col rounded-[14px] bg-navy/60 px-5 sm:px-8 py-6 sm:py-8">
                   <form className="flex flex-col h-full" onSubmit={handleSubmit}>
@@ -121,7 +121,7 @@ export default function Contact() {
                           type="text"
                           aria-label="Nombre"
                           className="w-full h-12 sm:h-16 rounded-2xl bg-white/10 border border-white/25 px-5 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-white/80 placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-gold/80 focus:border-gold/80 transition mt-3"
-                          style={{ marginTop: 10, marginLeft: 10, paddingLeft: 10 }}
+                          style={{ marginTop: 10, marginLeft: 5, paddingLeft: 10 }}
                           placeholder="NOMBRE"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
@@ -133,7 +133,7 @@ export default function Contact() {
                           type="email"
                           aria-label="Email"
                           className="w-full h-12 sm:h-16 rounded-2xl bg-white/10 border border-white/25 px-5 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-white/80 placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-gold/80 focus:border-gold/80 transition mt-3"
-                          style={{ marginTop: 10, marginLeft: 10, paddingLeft: 10 }}
+                          style={{ marginTop: 10, marginLeft: 5, paddingLeft: 10 }}
                           placeholder="EMAIL"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
@@ -145,7 +145,7 @@ export default function Contact() {
                         <textarea
                           aria-label="Mensaje"
                           className="w-full min-h-[160px] sm:min-h-[210px] rounded-2xl bg-white/10 border border-white/25 px-5 py-4 text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-white/80 placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-gold/80 focus:border-gold/80 transition resize-none mt-3"
-                          style={{ marginTop: 10, marginLeft: 10, paddingLeft: 10, paddingTop: 10 }}
+                          style={{ marginTop: 10, marginLeft: 5, paddingLeft: 10, paddingTop: 10 }}
                           placeholder="MENSAJE"
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
@@ -158,7 +158,7 @@ export default function Contact() {
                       <button
                         type="submit"
                         className="inline-flex w-full items-center justify-center h-12 sm:h-14 rounded-full bg-white text-navy font-semibold text-xs sm:text-sm tracking-[0.18em] uppercase hover:bg-cream active:scale-[0.98] transition-all duration-150 shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
-                        style={{ marginTop: 10, marginBottom: 10, marginLeft: 15 }}
+                        style={{ marginTop: 10, marginBottom: 10, marginLeft: 10 }}
                       >
                         Enviar a hello@advincapital.com
                       </button>
